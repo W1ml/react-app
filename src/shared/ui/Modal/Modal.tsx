@@ -1,5 +1,6 @@
 import React, { type ReactNode } from "react";
 import ReactDOM from "react-dom";
+import styles from "./Modal.module.css";
 
 interface ModalProps {
     isOpen: boolean;
@@ -8,28 +9,16 @@ interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-    if (!isOpen) return null;
-
     return ReactDOM.createPortal(
-        <div
-            style={{
-                position: "fixed",
-                top: 0, left: 0, right: 0, bottom: 0,
-                background: "rgba(0,0,0,0.5)",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-            onClick={onClose}
-        >
-            <div
-                style={{ background: "white", padding: "20px", borderRadius: "8px" }}
-                onClick={(e) => e.stopPropagation()}
-            >
+        isOpen ? (
+        <div className={styles.overlay} onClick={onClose}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
                 {children}
-                <button onClick={onClose} style={{ marginTop: "10px" }}>Закрыть</button>
+                <button className={styles.closeButton} onClick={onClose}>
+                    Закрыть
+                </button>
             </div>
-        </div>,
+        </div>) : null,
         document.body
     );
 };

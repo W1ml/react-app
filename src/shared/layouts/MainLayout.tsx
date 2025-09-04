@@ -6,7 +6,7 @@ interface MainLayoutProps {
     children: React.ReactNode
 }
 
-export const MainLayout = ({ children }: MainLayoutProps) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({ children }) =>  {
     return (
         <div className="layout">
             <Header />
