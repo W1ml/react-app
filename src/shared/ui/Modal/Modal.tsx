@@ -1,5 +1,5 @@
-import React, { type ReactNode } from "react";
-import ReactDOM from "react-dom";
+import { type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
 
 interface ModalProps {
@@ -8,8 +8,8 @@ interface ModalProps {
     children: ReactNode;
 }
 
-export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-    return ReactDOM.createPortal(
+export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+    return createPortal(
         isOpen ? (
         <div className={styles.overlay} onClick={onClose}>
             <div className={styles.modal} onClick={(e) => e.stopPropagation()}>

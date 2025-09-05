@@ -3,7 +3,7 @@ import { useTheme } from "../../../shared/lib/theme/useTheme";
 import { Button } from "../../../shared/ui/Button/Button";
 import styles from "./ThemeSwitcher.module.css"
 
-export const ThemeSwitcher: React.FC = () => {
+export const ThemeSwitcher = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
