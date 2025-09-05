@@ -1,0 +1,14 @@
+.header {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg-light);
+}
+
+body.dark .header {
+    background: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
