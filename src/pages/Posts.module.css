@@ -1,0 +1,45 @@
+.container {
+    padding: var(--spacing-xl);
+}
+
+.title {
+    margin-bottom: var(--spacing-2xl);
+    color: var(--text-color-light);
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.postCard {
+    border: var(--border-width) solid var(--border-color-light);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-sm) 0;
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.postTitle {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--text-color-light);
+}
+
+.postBody {
+    margin: 0;
+    color: var(--text-color-light);
+    line-height: 1.5;
+}
+
+body.dark .title,
+body.dark .postTitle,
+body.dark .postBody {
+    color: var(--text-color-dark);
+}
+
+body.dark .postCard {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+}

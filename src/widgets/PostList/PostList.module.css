@@ -1,0 +1,8 @@
+.emptyState {
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark .emptyState {
+    color: var(--text-color-dark);
+}
