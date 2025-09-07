@@ -1,0 +1,43 @@
+.postCard {
+    background-color: var(--bg-color-light);
+    border: 1px solid var(--border-color-light);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.postCard.clickable {
+    cursor: pointer;
+}
+
+.postCard:hover {
+    background-color: var(--card-bg-light);
+}
+
+.title {
+    margin: 0 0 10px 0;
+    color: var(--text-color-light);
+    font-size: 16px;
+}
+
+.body {
+    margin: 0;
+    color: var(--text-color-light);
+    font-size: 14px;
+}
+
+body.dark .postCard {
+    background-color: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .postCard:hover {
+    background-color: var(--card-bg-dark);
+}
+
+body.dark .title {
+    color: var(--text-color-dark);
+}
+
+body.dark .body {
+    color: var(--text-color-dark);
+}

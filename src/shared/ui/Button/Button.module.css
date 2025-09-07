@@ -1,0 +1,23 @@
+.button {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--button-bg);
+    color: var(--text-color-light);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+body.dark .button {
+    background-color: var(--button-bg);
+    color: var(--text-color-dark);
+}
+
+body.dark .button:hover {
+    background-color: #666;
+}
