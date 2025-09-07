@@ -1,0 +1,48 @@
+.button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin: var(--spacing-xs);
+    background-color: var(--button-primary);
+    color: var(--button-primary-text);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button:disabled:hover {
+    background-color: var(--button-primary);
+    transform: none;
+}
+
+/* Размеры кнопок */
+.small {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 12px;
+}
+
+.large {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 16px;
+}
+
+/* Кнопка назад */
+.back {
+    margin-bottom: var(--spacing-lg);
+}

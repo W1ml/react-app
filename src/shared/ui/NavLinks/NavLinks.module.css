@@ -1,0 +1,28 @@
+.container {
+    margin-bottom: var(--spacing-xl);
+}
+
+.links {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.link {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--button-primary);
+    color: var(--button-primary-text);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.link:hover {
+    background-color: var(--button-primary-hover);
+}
+
+body.dark .title {
+    color: var(--text-color-dark);
+}
