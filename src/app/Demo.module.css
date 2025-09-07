@@ -1,0 +1,55 @@
+.container {
+    padding: 20px;
+}
+
+.loadingButton {
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color-light);
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
+}
+
+.loadingButton:hover {
+    background-color: var(--card-bg-light);
+}
+
+.modalButton {
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color-light);
+    padding: 8px 15px;
+    cursor: pointer;
+    color: var(--text-color-light);
+}
+
+.modalButton:hover {
+    background-color: var(--card-bg-light);
+}
+
+.modalTitle {
+    margin: 0;
+    color: var(--text-color-light);
+}
+
+body.dark .loadingButton {
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .loadingButton:hover {
+    background-color: var(--card-bg-dark);
+}
+
+body.dark .modalButton {
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .modalButton:hover {
+    background-color: var(--card-bg-dark);
+}
+
+body.dark .modalTitle {
+    color: var(--text-color-dark);
+}
