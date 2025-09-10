@@ -1,0 +1,26 @@
+.footer {
+    padding: 10px;
+    border-top: 1px solid var(--border-color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg-light);
+    color: var(--text-color-light);
+}
+
+body.dark .footer {
+    border-top-color: var(--border-color-dark);
+    background: var(--card-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.githubLink {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.githubLink:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}

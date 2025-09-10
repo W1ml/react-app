@@ -1,18 +1,9 @@
-main {
-    background-color: #d1ffff;
+.layout {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 100px 100px;
 }
 
-div{
-    display: flex;
-    min-width: 50px;
-    flex-direction: column;
-    align-items: center;
+.main {
+    flex: 1;
 }
-
-article{
-    margin: 20px;
-}
-
