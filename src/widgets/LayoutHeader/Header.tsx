@@ -13,4 +13,3 @@ export const Header = ({ onAboutClick }: HeaderProps) => {
             <ThemeSwitcher />
         </header>
     )
-}
