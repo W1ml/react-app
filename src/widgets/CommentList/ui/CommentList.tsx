@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import type { Comment } from '../../../entities/comment/CommentTypes';
 import styles from './CommentList.module.css';
 
@@ -7,7 +7,13 @@ interface CommentListProps {
     postId: number;
 }
 
-const CommentItem = ({ comment, isCollapsed, onToggle }) => {
+interface CommentItemProps {
+    comment: Comment;
+    isCollapsed: boolean;
+    onToggle: () => void;
+}
+
+const CommentItem = ({ comment, isCollapsed, onToggle }: CommentItemProps) => {
     return (
         <div className={styles.commentItem}>
             <div className={styles.commentHeader}>

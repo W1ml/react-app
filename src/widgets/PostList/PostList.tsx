@@ -1,30 +1,26 @@
-import React, { useMemo, useCallback } from 'react'
+import { useMemo } from 'react'
 import { PostCard } from '../../entities/post/ui/PostCard.tsx'
 import type { Post } from '../../entities/post/PostTypes.tsx'
+import type { Comment } from '../../entities/comment/CommentTypes'
 import { withLoading } from '../../shared/lib/hoc/withLoading'
 import styles from './PostList.module.css'
 
 interface PostListProps {
-    posts: Post[]
-    onPostClick?: (post: Post) => void
+    posts: Post[];
+    comments: Comment[];
 }
 
-const PostListComponent = ({ posts, onPostClick }: PostListProps) => {
-    const handlePostClick = useCallback((post: Post) => {
-        if (onPostClick) {
-            onPostClick(post)
-        }
-    }, [onPostClick])
+const PostListComponent = ({ posts, comments }: PostListProps) => {
 
     const postElements = useMemo(() => {
         return posts.map((post) => (
             <PostCard 
                 key={post.id} 
                 post={post}
-                onClick={() => handlePostClick(post)}
+                comments={comments}
             />
         ))
-    }, [posts, handlePostClick])
+    }, [posts, comments])
 
     const isEmpty = useMemo(() => posts.length === 0, [posts.length])
 

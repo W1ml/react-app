@@ -41,3 +41,36 @@ body.dark .title {
 body.dark .body {
     color: var(--text-color-dark);
 }
+
+.toggleButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color-light);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.toggleButton:hover {
+    background-color: var(--card-bg-light);
+}
+
+.commentsSection {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color-light);
+}
+
+body.dark .toggleButton {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark .toggleButton:hover {
+    background-color: var(--bg-color-dark);
+}
+
+body.dark .commentsSection {
+    border-top-color: var(--border-color-dark);
+}

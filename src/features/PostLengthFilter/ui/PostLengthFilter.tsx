@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback, type ChangeEvent } from 'react';
 import type { Post } from '../../../entities/post/PostTypes';
 import { getMinMaxLengths } from '../lib/filterByLength';
 import type { FilterOptions } from '../lib/filterByLength';
@@ -14,13 +14,13 @@ export const PostLengthFilter = ({ posts, onFilterChange }: PostLengthFilterProp
     const [minLength, setMinLength] = useState(min);
     const [maxLength, setMaxLength] = useState(max);
 
-    const handleMinChange = useCallback((event) => {
+    const handleMinChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value);
         setMinLength(value);
         onFilterChange({ minLength: value, maxLength });
     }, [maxLength, onFilterChange]);
 
-    const handleMaxChange = useCallback((event) => {
+    const handleMaxChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value);
         setMaxLength(value);
         onFilterChange({ minLength, maxLength: value });
