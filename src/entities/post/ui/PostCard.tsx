@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, memo } from 'react';
 import type { Post } from '../PostTypes.ts'
 import type { Comment } from '../../comment/CommentTypes';
 import { CommentList } from '../../../widgets/CommentList/ui/CommentList';
@@ -9,7 +9,7 @@ interface PostCardProps {
     comments: Comment[];
 }
 
-export const PostCard = ({ post, comments }: PostCardProps) => {
+const PostCard = ({ post, comments }: PostCardProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpanded = useCallback(() => {
@@ -35,4 +35,6 @@ export const PostCard = ({ post, comments }: PostCardProps) => {
             )}
         </article>
     )
-}
+};
+
+export const PostCardComponent = memo(PostCard);

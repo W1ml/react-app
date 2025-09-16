@@ -1,8 +1,7 @@
-import { useMemo } from 'react'
-import { PostCard } from '../../entities/post/ui/PostCard.tsx'
+import { useMemo, memo } from 'react'
+import { PostCardComponent } from '../../entities/post/ui/PostCard.tsx'
 import type { Post } from '../../entities/post/PostTypes.tsx'
 import type { Comment } from '../../entities/comment/CommentTypes'
-import { withLoading } from '../../shared/lib/hoc/withLoading'
 import styles from './PostList.module.css'
 
 interface PostListProps {
@@ -10,11 +9,11 @@ interface PostListProps {
     comments: Comment[];
 }
 
-const PostListComponent = ({ posts, comments }: PostListProps) => {
+const PostList = ({ posts, comments }: PostListProps) => {
 
     const postElements = useMemo(() => {
         return posts.map((post) => (
-            <PostCard 
+            <PostCardComponent
                 key={post.id} 
                 post={post}
                 comments={comments}
@@ -39,4 +38,4 @@ const PostListComponent = ({ posts, comments }: PostListProps) => {
     )
 }
 
-export const PostList = withLoading(PostListComponent)
+export const PostsList = memo(PostList);

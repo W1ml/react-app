@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import styles from './LoadingSpinner.module.css';
 
-export const LoadingSpinner = () => {
+const LoadingSpinnerComponent = () => {
     return (
         <div className={styles.loadingContainer}>
             <div className={styles.spinner}></div>
@@ -8,3 +9,5 @@ export const LoadingSpinner = () => {
         </div>
     );
 };
+
+export const LoadingSpinner = memo(LoadingSpinnerComponent);

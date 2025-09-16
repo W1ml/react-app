@@ -1,4 +1,4 @@
-import { useState, useCallback, type ChangeEvent } from 'react';
+import { useState, useCallback, memo, type ChangeEvent } from 'react';
 import type { Post } from '../../../entities/post/PostTypes';
 import { getMinMaxLengths } from '../lib/filterByLength';
 import type { FilterOptions } from '../lib/filterByLength';
@@ -9,7 +9,7 @@ interface PostLengthFilterProps {
     onFilterChange: (options: FilterOptions) => void;
 }
 
-export const PostLengthFilter = ({ posts, onFilterChange }: PostLengthFilterProps) => {
+const PostLengthFilterComponent = ({ posts, onFilterChange }: PostLengthFilterProps) => {
     const { min, max } = getMinMaxLengths(posts);
     const [minLength, setMinLength] = useState(min);
     const [maxLength, setMaxLength] = useState(max);
@@ -72,3 +72,5 @@ export const PostLengthFilter = ({ posts, onFilterChange }: PostLengthFilterProp
         </div>
     );
 };
+
+export const PostLengthFilter = memo(PostLengthFilterComponent);
