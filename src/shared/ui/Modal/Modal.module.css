@@ -4,17 +4,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--bg-color-light); /*Если надо убрать прозрачный фон*/
-    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
-
-body.dark .overlay {
-    background: var(--bg-color-dark);
-} /* - Если надо убрать прозрачный фон*/
 
 .modal {
     background: var(--bg-color-light);
@@ -114,3 +109,4 @@ body.dark .button {
 body.dark .button:hover {
     background-color: var(--card-bg-dark);
 }
+
