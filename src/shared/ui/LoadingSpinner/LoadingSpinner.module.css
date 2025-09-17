@@ -1,0 +1,13 @@
+.loadingContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+.loadingText {
+    color: var(--text-color-light);
+    margin: 0;
+}
+
+body.dark .loadingText {
+    color: var(--text-color-dark);
+}

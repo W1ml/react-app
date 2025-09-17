@@ -1,32 +1,49 @@
-import React, { useMemo, useCallback } from 'react'
-import { PostCard } from '../../entities/post/ui/PostCard.tsx'
-import type { Post } from '../../entities/post/PostTypes.tsx'
-import { withLoading } from '../../shared/lib/hoc/withLoading'
+import { useMemo, memo } from 'react'
+import { Link } from 'react-router-dom'
+import { usePosts } from '../../features/PostList/model/hooks/usePosts'
 import styles from './PostList.module.css'
 
 interface PostListProps {
-    posts: Post[]
-    onPostClick?: (post: Post) => void
+    userId?: number;
 }
 
-const PostListComponent = ({ posts, onPostClick }: PostListProps) => {
-    const handlePostClick = useCallback((post: Post) => {
-        if (onPostClick) {
-            onPostClick(post)
-        }
-    }, [onPostClick])
+const PostCard = memo(({ post }: { post: { id: number; title: string; body: string } }) => (
+    <Link to={`/posts/${post.id}`} className={styles.postLink}>
+        <div className={styles.postCard}>
+            <h3 className={styles.postTitle}>{post.title}</h3>
+            <p className={styles.postBody}>{post.body}</p>
+        </div>
+    </Link>
+));
+
+PostCard.displayName = 'PostCard';
+
+const PostListComponent = ({ userId }: PostListProps) => {
+    const { posts, loading, error } = usePosts({ userId });
 
     const postElements = useMemo(() => {
         return posts.map((post) => (
-            <PostCard 
-                key={post.id} 
-                post={post}
-                onClick={() => handlePostClick(post)}
-            />
+            <PostCard key={post.id} post={post} />
         ))
-    }, [posts, handlePostClick])
+    }, [posts]);
 
-    const isEmpty = useMemo(() => posts.length === 0, [posts.length])
+    const isEmpty = useMemo(() => posts.length === 0, [posts.length]);
+
+    if (loading) {
+        return (
+            <div className={styles.loading}>
+                Загрузка постов...
+            </div>
+        )
+    }
+
+    if (error) {
+        return (
+            <div className={styles.error}>
+                Ошибка: {error}
+            </div>
+        )
+    }
 
     if (isEmpty) {
         return (
@@ -43,4 +60,4 @@ const PostListComponent = ({ posts, onPostClick }: PostListProps) => {
     )
 }
 
-export const PostList = withLoading(PostListComponent)
+export const PostList = memo(PostListComponent);

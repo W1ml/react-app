@@ -4,14 +4,13 @@ import React from "react";
 import styles from './MainLayout.module.css';
 
 interface MainLayoutProps {
-    children: React.ReactNode
-    onAboutClick?: () => void;
+    children: React.ReactNode;
 }
 
-export const MainLayout = ({ children, onAboutClick }: MainLayoutProps) =>  {
+export const MainLayout = ({ children }: MainLayoutProps) =>  {
     return (
         <div className={styles.layout}>
-            <Header onAboutClick={onAboutClick} />
+            <Header />
             <main className={styles.main}>{children}</main>
             <Footer />
         </div>
