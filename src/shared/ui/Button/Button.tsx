@@ -3,10 +3,11 @@ import styles from './Button.module.css';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({ children, ...props }: ButtonProps) => {
+export const Button = ({ children, className, ...props }: ButtonProps) => {
+    const buttonClass = className ? `${styles.button} ${className}` : styles.button;
+    
     return (
-        <button {...props}
-        className={styles.button}>
+        <button {...props} className={buttonClass}>
             {children}
         </button>
     );

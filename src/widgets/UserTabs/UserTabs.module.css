@@ -1,0 +1,47 @@
+.userTabs {
+    margin-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color-light);
+    padding-bottom: 10px;
+}
+
+.tab {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--text-color-light);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-color-light);
+}
+
+.tab:hover {
+    background: var(--button-bg);
+}
+
+.tab.active {
+    background: var(--button-bg);
+}
+
+/* Темная тема */
+body.dark .userName {
+    color: var(--text-color-dark);
+}
+
+body.dark .nav {
+    border-bottom-color: var(--border-color-dark);
+}
+
+body.dark .tab {
+    color: var(--text-color-dark);
+    background: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .tab:hover {
+    background: #666;
+}

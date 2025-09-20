@@ -1,0 +1,53 @@
+.mainPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color-light);
+    background: var(--card-bg-light);
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color-light);
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: var(--button-bg);
+}
+
+.tab.active {
+    background: var(--text-color-light);
+    color: var(--bg-color-light);
+    border-color: var(--text-color-light);
+}
+
+.tabContent {
+    margin-top: 20px;
+}
+
+/* Темная тема */
+body.dark .tab {
+    background: var(--card-bg-dark);
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .tab:hover {
+    background: #666;
+}
+
+body.dark .tab.active {
+    background: var(--text-color-dark);
+    color: var(--bg-color-dark);
+    border-color: var(--text-color-dark);
+}

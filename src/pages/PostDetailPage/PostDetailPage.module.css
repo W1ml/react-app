@@ -1,0 +1,52 @@
+.postDetailPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--card-bg-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h1 {
+    margin: 0 0 15px 0;
+    color: var(--text-color-light);
+}
+
+.post p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color-light);
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comments h2 {
+    margin-bottom: 15px;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
+
+/* Темная тема */
+body.dark .post {
+    background: var(--card-bg-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .post h1,
+body.dark .post p,
+body.dark .comments h2,
+body.dark .loading,
+body.dark .error {
+    color: var(--text-color-dark);
+}
