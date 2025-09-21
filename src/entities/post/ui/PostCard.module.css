@@ -1,0 +1,76 @@
+.postCard {
+    background-color: var(--bg-color-light);
+    border: 1px solid var(--border-color-light);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.postCard.clickable {
+    cursor: pointer;
+}
+
+.postCard:hover {
+    background-color: var(--card-bg-light);
+}
+
+.title {
+    margin: 0 0 10px 0;
+    color: var(--text-color-light);
+    font-size: 16px;
+}
+
+.body {
+    margin: 0;
+    color: var(--text-color-light);
+    font-size: 14px;
+}
+
+body.dark .postCard {
+    background-color: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .postCard:hover {
+    background-color: var(--card-bg-dark);
+}
+
+body.dark .title {
+    color: var(--text-color-dark);
+}
+
+body.dark .body {
+    color: var(--text-color-dark);
+}
+
+.toggleButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color-light);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.toggleButton:hover {
+    background-color: var(--card-bg-light);
+}
+
+.commentsSection {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color-light);
+}
+
+body.dark .toggleButton {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark .toggleButton:hover {
+    background-color: var(--bg-color-dark);
+}
+
+body.dark .commentsSection {
+    border-top-color: var(--border-color-dark);
+}
