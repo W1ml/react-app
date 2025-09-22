@@ -7,7 +7,4 @@ export interface ThemeContextProps {
     toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({
-    theme: "light",
-    toggleTheme: () => {},
-});
+export const ThemeContext = createContext<ThemeContextProps | null>(null);

@@ -5,19 +5,88 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    background-color: var(--button-bg);
-    color: var(--text-color-light);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .button:active {
     transform: scale(0.98);
 }
 
-body.dark .button {
-    background-color: var(--button-bg);
-    color: var(--text-color-dark);
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-body.dark .button:hover {
-    background-color: #666;
+.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.primary:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.secondary:hover:not(:disabled) {
+    background-color: #545b62;
+}
+
+.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.danger:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+.small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.medium {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.large {
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+/* Темная тема */
+body.dark .primary {
+    background-color: #0d6efd;
+    color: white;
+}
+
+body.dark .primary:hover:not(:disabled) {
+    background-color: #0b5ed7;
+}
+
+body.dark .secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+body.dark .secondary:hover:not(:disabled) {
+    background-color: #5c636a;
+}
+
+body.dark .danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+body.dark .danger:hover:not(:disabled) {
+    background-color: #bb2d3b;
 }

@@ -1,0 +1,91 @@
+.filterContainer {
+    background-color: var(--card-bg-light);
+    border: 1px solid var(--border-color-light);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.title {
+    margin: 0 0 10px 0;
+    color: var(--text-color-light);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.inputGroup {
+    
+}
+
+.label {
+    color: var(--text-color-light);
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input {
+    padding: 5px;
+    border: 1px solid var(--border-color-light);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    width: 80px;
+}
+
+.resetButton {
+    padding: 5px 10px;
+    background-color: var(--button-bg);
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color-light);
+    cursor: pointer;
+}
+
+.resetButton:hover {
+    background-color: var(--card-bg-light);
+}
+
+.info {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: var(--bg-color-light);
+    border: 1px solid var(--border-color-light);
+    font-size: 12px;
+    color: var(--text-color-light);
+}
+
+body.dark .filterContainer {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .title {
+    color: var(--text-color-dark);
+}
+
+body.dark .label {
+    color: var(--text-color-dark);
+}
+
+body.dark .input {
+    background-color: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark .resetButton {
+    background-color: var(--button-bg);
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .resetButton:hover {
+    background-color: var(--card-bg-dark);
+}
+
+body.dark .info {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
