@@ -1,0 +1,20 @@
+.userAlbumsPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
+
+.error {
+    color: #dc3545;
+}
+
+/* Темная тема */
+body.dark .loading {
+    color: var(--text-color-dark);
+}

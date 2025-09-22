@@ -1,5 +1,2 @@
-export interface Post {
-    id: number
-    title: string
-    body: string
-}
+// @deprecated Используйте import { Post } from './model/types'
+export { Post, CreatePostRequest, UpdatePostRequest, PostId } from './model/types';

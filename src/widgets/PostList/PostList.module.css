@@ -1,0 +1,76 @@
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.postLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.postCard {
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--card-bg-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color-light);
+}
+
+.postCard:hover {
+    background: var(--button-bg);
+    border-color: var(--border-color-light);
+}
+
+.postTitle {
+    margin: 0 0 10px 0;
+    color: var(--text-color-light);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.postBody {
+    margin: 0;
+    color: var(--text-color-light);
+    opacity: 0.8;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.loading, .error, .emptyState {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+}
+
+.error {
+    color: #dc3545;
+}
+
+.emptyState {
+    color: #6c757d;
+}
+
+/* Темная тема */
+body.dark .postCard {
+    background: var(--card-bg-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color-dark);
+}
+
+body.dark .postCard:hover {
+    background: #555;
+    border-color: var(--border-color-dark);
+}
+
+body.dark .postTitle,
+body.dark .postBody,
+body.dark .loading,
+body.dark .emptyState {
+    color: var(--text-color-dark);
+}
